@@ -546,7 +546,7 @@ async function submitForm(event){
       });
       const reply = await r.json().catch(() => ({}));
 
-      if(!r.ok && r.status >= 400 && r.status < 500 && r.status !== 404 && r.status !== 429) {
+      if(!r.ok && r.status === 400) {
         status.classList.add('error');
         status.textContent = reply.error || 'Please review your input fields.';
         btn.disabled = false;

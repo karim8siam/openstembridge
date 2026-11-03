@@ -5,8 +5,8 @@
   "type": "module",
   "description": "Verified-consent research opportunity exchange and mentorship toolkit for OpenSTEM",
   "scripts": {
-    "start": "node server.mjs",
     "dev": "node server.mjs",
+    "serve": "node server.mjs",
     "seed": "node seed.mjs",
     "dev:static": "python3 -m http.server 8787",
     "dev:pages": "wrangler pages dev . --binding OPENSTEM=match",

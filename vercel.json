@@ -1,5 +1,8 @@
 {
-  "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/api/candidates", "destination": "/data/candidates.json" },
+    { "source": "/api/opportunities", "destination": "/data/opportunities.json" }
+  ]
 }

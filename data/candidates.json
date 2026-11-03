@@ -1,0 +1,49 @@
+{
+  "candidates": [
+    {
+      "id": "cand-sofia-chen-2026",
+      "public_name": "Sofia Chen",
+      "institution": "State University",
+      "academic_level": "Undergraduate",
+      "discipline": "Physics",
+      "research_area": "Quantum Computing & Simulation",
+      "skills": ["Python", "Qiskit", "QuTiP", "Linear Algebra", "LaTeX"],
+      "bio": "Undergraduate researcher focusing on open quantum systems. Built and published an open-source reproducibility notebook replicating the Jaynes-Cummings model dynamics with dissipative photon loss.",
+      "evidence_url": "https://github.com/example/quantum-reproducibility-demo",
+      "availability_hours": "10 hours/week",
+      "timezone_region": "UTC-5 / North America",
+      "collaboration_mode": "Remote",
+      "research_goal": "Collaborate on numerical modeling of quantum decoherence and contribute to open peer-reviewed work."
+    },
+    {
+      "id": "cand-tariq-ahmed-2026",
+      "public_name": "Tariq Ahmed",
+      "institution": "Institute of Applied Sciences",
+      "academic_level": "Master’s student",
+      "discipline": "Computer Science",
+      "research_area": "Scientific Machine Learning & PINNs",
+      "skills": ["Python", "PyTorch", "JAX", "Numerical Analysis", "SciPy"],
+      "bio": "MSc student exploring physics-informed neural networks for fluid dynamics. Implemented benchmark models for 1D Burgers equation and verified conservation of mass constraints across test suites.",
+      "evidence_url": "https://github.com/example/pinn-fluid-benchmarks",
+      "availability_hours": "12 hours/week",
+      "timezone_region": "UTC+6 / South Asia",
+      "collaboration_mode": "Remote",
+      "research_goal": "Gain hands-on experience applying neural operators to climate and atmospheric physics modeling."
+    },
+    {
+      "id": "cand-maya-lin-2026",
+      "public_name": "Maya Lin",
+      "institution": "Metropolitan University",
+      "academic_level": "Undergraduate",
+      "discipline": "Biology",
+      "research_area": "Computational Genomics & Data Analysis",
+      "skills": ["R", "Python", "Bioconductor", "Scanpy", "ggplot2"],
+      "bio": "3rd year computational biology major. Completed an independent replication of a single-cell RNA-seq clustering workflow on pancreas islet cells, documenting batch correction trade-offs.",
+      "evidence_url": "https://github.com/example/scrna-replication-study",
+      "availability_hours": "8 hours/week",
+      "timezone_region": "UTC+1 / Europe",
+      "collaboration_mode": "Flexible",
+      "research_goal": "Learn cutting-edge spatial transcriptomics analysis and assist a lab with data quality pipelines."
+    }
+  ]
+}

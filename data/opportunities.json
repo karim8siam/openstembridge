@@ -1,0 +1,58 @@
+{
+  "opportunities": [
+    {
+      "id": "opp-sciml-climate-2026",
+      "full_name": "Dr. Ananya Sen",
+      "institution": "Atmospheric Physics & Data Science Group",
+      "discipline": "Computer Science",
+      "required_skills": "Python, PyTorch, NumPy, Physics-Informed Neural Networks",
+      "project_summary": "Developing lightweight surrogate models for advection-diffusion equations in regional weather prediction. Comparing Fourier Neural Operators (FNO) against standard CNN baselines with an emphasis on physical conservation laws.",
+      "opportunity_type": "Paid research role",
+      "project_title": "Scientific ML Surrogates for Atmospheric Transport Models",
+      "weekly_hours": "10–12 hours/week",
+      "duration": "8 weeks",
+      "work_mode": "Remote",
+      "location_detail": "Global remote collaboration",
+      "compensation_detail": "$22/hour funded by national climate data initiative",
+      "eligibility": "Strong background in deep learning baselines and ODEs/PDEs",
+      "mentor_support": "Weekly structured check-ins, cloud GPU allocation (A100 instances), and support preparing findings for publication.",
+      "deadline": "2026-12-15"
+    },
+    {
+      "id": "opp-quantum-optics-2026",
+      "full_name": "Dr. Elena Rostova",
+      "institution": "Quantum Information Lab, Tech Institute",
+      "discipline": "Physics",
+      "required_skills": "Python, Qiskit, Linear Algebra, Master Equations",
+      "project_summary": "Investigating decoherence mitigation in open quantum spin networks. The student will reproduce published Lindblad master-equation simulations, evaluate numerical stability under varying coupling strengths, and contribute to an open-source benchmark suite.",
+      "opportunity_type": "Funded research position",
+      "project_title": "Numerical Simulation of Open Quantum Spin Systems",
+      "weekly_hours": "8–10 hours/week",
+      "duration": "10 weeks",
+      "work_mode": "Remote",
+      "location_detail": "Fully remote with weekly video meetings (UTC+1 to UTC+6)",
+      "compensation_detail": "Stipend available via university grant ($600/month)",
+      "eligibility": "Undergraduate or Master’s student with Python and quantum mechanics basics",
+      "mentor_support": "Weekly 1-on-1 supervision, dedicated Discord office hours, computational cluster access, and co-authorship opportunity if benchmarks are accepted.",
+      "deadline": "2026-12-31"
+    },
+    {
+      "id": "opp-bio-single-cell-2026",
+      "full_name": "Prof. Marcus Vance",
+      "institution": "Center for Computational Biology",
+      "discipline": "Biology",
+      "required_skills": "R or Python, Seurat / Scanpy, Statistics, Data Visualization",
+      "project_summary": "Benchmarking trajectory-inference algorithms across public single-cell RNA-seq datasets of immune cell differentiation. You will evaluate reproducibility of published clusters and identify algorithmic sensitivity to preprocessing filters.",
+      "opportunity_type": "Academic credit / internship",
+      "project_title": "Benchmarking Single-Cell Trajectory Reconstruction in Immune Cells",
+      "weekly_hours": "6–8 hours/week",
+      "duration": "12 weeks",
+      "work_mode": "Flexible",
+      "location_detail": "Hybrid or remote; core meetings in European time zones",
+      "compensation_detail": "Academic internship credit, compute resources provided",
+      "eligibility": "Familiarity with R or Python and foundational biology or bioinformatics",
+      "mentor_support": "Fortnightly review with senior postdoc, code review on GitHub, and guidance drafting a short conference abstract.",
+      "deadline": "2026-11-30"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+functions/
+server.mjs
+seed.mjs
+tests/
+openstem.sqlite
+*.sqlite
+*.sqlite3
+*.db
