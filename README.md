@@ -94,5 +94,6 @@ Read [`LAUNCH_PLAYBOOK.md`](LAUNCH_PLAYBOOK.md) for acquisition, quality gates, 
 - OpenSTEM Field: https://openstemfield.org/
 - OpenSTEM Tool: https://openstemtool.org/
 - OpenSTEM Replicate: https://openstemreplicate.org/
+- OpenSTEM Recruitment: https://openstemrecruitment.com/
 - StudexaX Discord: https://discord.gg/tBBKtvFJzW
 - Contact: shahriyarkarimsiam@gmail.com
