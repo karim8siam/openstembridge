@@ -537,6 +537,25 @@ async function submitForm(event){
       })
     }).then(res => res.json()).catch(() => null);
 
+    // Also dispatch to Google Sheets Webhook if configured
+    const sheetsWebhook = window.OPENSTEM_SHEETS_WEBHOOK || window.GOOGLE_SHEETS_WEBHOOK_URL;
+    if (sheetsWebhook) {
+      try {
+        fetch(sheetsWebhook, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            form_category: activeModal,
+            submission_time: new Date().toISOString(),
+            ...data
+          })
+        }).catch(() => null);
+      } catch (sheetsErr) {
+        // Non-blocking
+      }
+    }
+
     // Also send to local or edge API if available
     try {
       const r = await fetch(endpoint, {
