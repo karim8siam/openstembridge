@@ -4,26 +4,27 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { DatabaseSync } from 'node:sqlite';
 
-import * as candidatesApi from './functions/api/candidates.js';
-import * as opportunitiesApi from './functions/api/opportunities.js';
-import * as applyApi from './functions/api/apply.js';
-import * as requestApi from './functions/api/request.js';
-import * as interestApi from './functions/api/interest.js';
-import * as adminApi from './functions/api/admin.js';
+import * as candidatesApi from '../cloudflare-functions/api/candidates.js';
+import * as opportunitiesApi from '../cloudflare-functions/api/opportunities.js';
+import * as applyApi from '../cloudflare-functions/api/apply.js';
+import * as requestApi from '../cloudflare-functions/api/request.js';
+import * as interestApi from '../cloudflare-functions/api/interest.js';
+import * as adminApi from '../cloudflare-functions/api/admin.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const rootDir = path.resolve(__dirname, '..');
 
 const PORT = parseInt(process.env.PORT || '8787', 10);
 const HOST = process.env.HOST || 'localhost';
-const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'openstem.sqlite');
+const DB_PATH = process.env.DB_PATH || path.join(rootDir, 'database', 'openstem.sqlite');
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || 'openstem-admin-development-token-32chars';
 const RATE_LIMIT_SALT = process.env.RATE_LIMIT_SALT || 'openstem-development-rate-limit-salt';
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'shahriyarkarimsiam@gmail.com';
 
 // Initialize SQLite database
 const sqliteDb = new DatabaseSync(DB_PATH);
-const schemaSql = fs.readFileSync(path.join(__dirname, 'schema.sql'), 'utf8');
+const schemaSql = fs.readFileSync(path.join(rootDir, 'database', 'schema.sql'), 'utf8');
 sqliteDb.exec(schemaSql);
 sqliteDb.exec(`
   CREATE TABLE IF NOT EXISTS email_notifications (
@@ -163,10 +164,10 @@ function serveStatic(req, res, pathname) {
     relativePath = '/index.html';
   }
 
-  let filePath = path.normalize(path.join(__dirname, relativePath));
+  let filePath = path.normalize(path.join(rootDir, relativePath));
 
   // Prevent directory traversal
-  if (!filePath.startsWith(__dirname)) {
+  if (!filePath.startsWith(rootDir)) {
     res.statusCode = 403;
     res.end('Forbidden');
     return;

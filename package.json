@@ -5,15 +5,12 @@
   "type": "module",
   "description": "Verified-consent research opportunity exchange and mentorship toolkit for OpenSTEM",
   "scripts": {
-    "dev": "node server.mjs",
-    "serve": "node server.mjs",
-    "seed": "node seed.mjs",
+    "build": "echo 'Static build ready'",
+    "dev": "node scripts/server.mjs",
+    "serve": "node scripts/server.mjs",
+    "seed": "node scripts/seed.mjs",
     "dev:static": "python3 -m http.server 8787",
-    "dev:pages": "wrangler pages dev . --binding OPENSTEM=match",
-    "check": "node --check app.js && node --check match-lab.js && node --check admin.js && node --check functions/_lib/core.js && node --check functions/api/apply.js && node --check functions/api/request.js && node --check functions/api/interest.js && node --check functions/api/opportunities.js && node --check functions/api/candidates.js && node --check functions/api/admin.js",
+    "check": "node --check app.js && node --check match-lab.js && node --check admin.js && node --check cloudflare-functions/_lib/core.js && node --check cloudflare-functions/api/apply.js && node --check cloudflare-functions/api/request.js && node --check cloudflare-functions/api/interest.js && node --check cloudflare-functions/api/opportunities.js && node --check cloudflare-functions/api/candidates.js && node --check cloudflare-functions/api/admin.js",
     "test": "node tests/smoke.mjs"
-  },
-  "devDependencies": {
-    "wrangler": "^4.47.0"
   }
 }

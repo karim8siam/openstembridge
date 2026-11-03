@@ -4,7 +4,8 @@ import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'openstem.sqlite');
+const rootDir = path.resolve(__dirname, '..');
+const DB_PATH = process.env.DB_PATH || path.join(rootDir, 'database', 'openstem.sqlite');
 
 const db = new DatabaseSync(DB_PATH);
 

@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
-import {onRequestPost as apply} from '../functions/api/apply.js';
-import {onRequestPost as requestTalent} from '../functions/api/request.js';
-import {onRequestPost as interest} from '../functions/api/interest.js';
-import {onRequestGet as candidates} from '../functions/api/candidates.js';
-import {onRequestGet as opportunities} from '../functions/api/opportunities.js';
-import {onRequestGet as adminGet,onRequestPatch as adminPatch,onRequestDelete as adminDelete} from '../functions/api/admin.js';
+import {onRequestPost as apply} from '../cloudflare-functions/api/apply.js';
+import {onRequestPost as requestTalent} from '../cloudflare-functions/api/request.js';
+import {onRequestPost as interest} from '../cloudflare-functions/api/interest.js';
+import {onRequestGet as candidates} from '../cloudflare-functions/api/candidates.js';
+import {onRequestGet as opportunities} from '../cloudflare-functions/api/opportunities.js';
+import {onRequestGet as adminGet,onRequestPatch as adminPatch,onRequestDelete as adminDelete} from '../cloudflare-functions/api/admin.js';
 let calls=[];let foundProject=true;
 const approvedProject='977e1e3f-ae3b-4df6-930f-218ae0b59ff2';
 const DB={prepare(sql){return {bind(...args){calls.push({sql,args});return this;},async first(){if(sql.includes('FROM research_requests'))return foundProject?{id:approvedProject}:null;return {hits:1};},async run(){return {success:true,meta:{changes:1}};},async all(){if(sql.includes('FROM candidates WHERE'))return {results:[{id:'test',public_name:'Example',email:'SHOULD_NOT_SHOW',discipline:'Physics',skills:'Python, C++',evidence_url:'https://example.org/work'}]};if(sql.includes('FROM research_requests WHERE'))return {results:[{id:approvedProject,project_title:'Quantum Research',institution:'Example U',discipline:'Physics',full_name:'Faculty Example',required_skills:'Python'}]};return {results:[]};}}}};

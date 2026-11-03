@@ -1,8 +1,12 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
     { "source": "/api/candidates", "destination": "/data/candidates.json" },
-    { "source": "/api/opportunities", "destination": "/data/opportunities.json" }
+    { "source": "/api/opportunities", "destination": "/data/opportunities.json" },
+    { "source": "/api/apply", "destination": "/data/success.json" },
+    { "source": "/api/request", "destination": "/data/success.json" },
+    { "source": "/api/interest", "destination": "/data/success.json" }
   ]
 }

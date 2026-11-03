@@ -1,8 +1,7 @@
-functions/
-server.mjs
-seed.mjs
+cloudflare-functions/
+scripts/
+database/
 tests/
-openstem.sqlite
 *.sqlite
 *.sqlite3
 *.db
