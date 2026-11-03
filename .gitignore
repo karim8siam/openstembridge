@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+.env
+.dev.vars
+*.log
+.DS_Store
+*.sqlite
+*.sqlite3
+*.db
+.vercel
