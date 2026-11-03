@@ -537,8 +537,9 @@ async function submitForm(event){
       })
     }).then(res => res.json()).catch(() => null);
 
-    // Also dispatch to Google Sheets Webhook if configured
-    const sheetsWebhook = window.OPENSTEM_SHEETS_WEBHOOK || window.GOOGLE_SHEETS_WEBHOOK_URL;
+    // Also dispatch to Google Sheets Webhook
+    const DEFAULT_SHEETS_WEBHOOK = 'https://script.google.com/macros/s/AKfycbzJ1-RB2d5WMzHnDWuOV26l2Js6n8KPLGKIuV4newLUi6y11kqA0FExjTZlmEDpp3LK/exec';
+    const sheetsWebhook = window.OPENSTEM_SHEETS_WEBHOOK || window.GOOGLE_SHEETS_WEBHOOK_URL || DEFAULT_SHEETS_WEBHOOK;
     if (sheetsWebhook) {
       try {
         fetch(sheetsWebhook, {
